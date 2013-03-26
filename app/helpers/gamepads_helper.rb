@@ -1,0 +1,2 @@
+module GamepadsHelper
+end

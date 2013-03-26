@@ -1,0 +1,49 @@
+<%= javascript_include_tag 'gamepads.js' %>
+
+<h1>
+  Game Pad
+</h1>
+
+<h2>
+  Player: <%= player %>
+</h2>
+
+
+<table style="width: 100%" id="gamepad" data-channel="<%= @player.channel_name %>">
+  <tr>
+    <td>
+    </td>
+
+    <td id="up" style="background-color: yellow;">
+      UP
+    </td>
+
+    <td>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="left" style="background-color: yellow;">
+      LEFT
+    </td>
+
+    <td>
+    </td>
+
+    <td id="right" style="background-color: yellow;">
+      RIGHT
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    </td>
+
+    <td id="down" style="background-color: yellow;">
+      DOWN
+    </td>
+
+    <td>
+    </td>
+  </tr>
+</table>

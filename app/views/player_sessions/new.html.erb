@@ -1,0 +1,11 @@
+<h1>
+  Login
+</h1>
+
+<div>
+  <%= form_tag player_sessions_path, method: :post do |f| %>
+    <%= label_tag 'Player Name:' %>
+    <%= text_field_tag :player %>
+    <%= submit_tag :login %>
+  <% end %>
+</div>
