@@ -5,11 +5,11 @@
 </h1>
 
 <h2>
-  Player: <%= player %>
+  Player: <%= current_player.name %>
 </h2>
 
 
-<table style="width: 100%" id="gamepad" data-channel="<%= @player.channel_name %>">
+<table style="width: 100%" id="gamepad" data-channel="<%= current_player.channel_name %>">
   <tr>
     <td>
     </td>

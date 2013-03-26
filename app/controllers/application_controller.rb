@@ -4,15 +4,15 @@ class ApplicationController < ActionController::Base
   private
 
   def require_player!
-    unless player
+    unless current_player.logged_in?
       session[:redirect_url] = "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
       redirect_to new_player_sessions_path
     end
   end
-  
-  def player
-    session[:player]
+
+  def current_player
+    @player ||= PlayerSession.new(session)
   end
-  helper_method :player
+  helper_method :current_player
 
 end

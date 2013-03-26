@@ -1,5 +1,6 @@
 WebsocketGamepad::Application.routes.draw do
 
+  root to: 'home#index'
   resource :player_sessions, only: [:create, :new, :destroy], path: 'login'
   resource :game, only: [:show]
   resource :gamepad, only: [:show]

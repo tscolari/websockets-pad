@@ -1,8 +1,7 @@
 module Websockets
   class GamepadSocketController < BaseController
     def move
-      # send_message message_type, session[:player] , :namespace => :game
-      @player = PlayerSession.new(session[:player])
+      @player = PlayerSession.new(session)
       WebsocketRails[@player.channel_name].trigger message_type, {message: "move #{message}"}
     end
 
